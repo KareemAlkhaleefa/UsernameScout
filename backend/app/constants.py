@@ -57,7 +57,7 @@ TARGET_SITES = [
     },
     {
         "name": "BitBucket",
-        "url_template": "https://bitbucket.org/{}/workspace/repositories/",
+        "url_template": "https://bitbucket.org/{}/workspace/repositories",
         "category": "Development",
         "official_site": "https://bitbucket.org",
         "availability_strategy": "status_not_found",
@@ -71,13 +71,67 @@ TARGET_SITES = [
     },
     {
         "name": "Reddit",
-        "url_template": "https://www.reddit.com/user/{}/",
+        "url_template": "https://www.reddit.com/user/{}",
         "category": "Social",
         "availability_strategy": "content_match",
         "not_found_phrases": [
             "Sorry, nobody on Reddit goes by that name.",
             "This account may have been banned or the username is incorrect.",
         ],
+    },
+    {
+        "name": "Instagram",
+        "url_template": "https://instagram.com/{}",
+        "category": "Social",
+        "availability_strategy": "status_redirect",
+    },
+    {
+        "name": "Behance",
+        "url_template": "https://www.behance.net/{}",
+        "category": "Professional",
+        "availability_strategy": "status_not_found",
+    },
+    {
+        "name": "Minecraft",
+        "url_template": "https://minecraftuuid.com/player/{}",
+        "category": "Gaming",
+        "availability_strategy": "content_match",
+        "not_found_phrases": [
+            "No user was found matching that username or UUID.",
+            "This data may also be blocked due to a data protection request.",
+        ],
+    },
+    {
+        "name": "Xbox",
+        "url_template": "https://xboxgamertag.com/search/{}",
+        "category": "Gaming",
+        "availability_strategy": "content_match",
+        "not_found_phrases": [
+            "Gamertag doesn't exist",
+            "Congratulations, you've found a gamertag that is untaken. You should claim it.",
+        ],
+    },
+    {
+        "name": "Lichess",
+        "url_template": "https://lichess.org/@/{}",
+        "category": "Gaming",
+        "availability_strategy": "status_not_found",
+    },
+    {
+        "name": "SteamGroup",
+        "url_template": "https://steamcommunity.com/groups/{}",
+        "category": "Gaming",
+        "availability_strategy": "content_match",
+        "not_found_phrases": [
+            "An error was encountered while processing your request:",
+            "No group could be retrieved for the given URL.",
+        ],
+    },
+    {
+        "name": "VSCO",
+        "url_template": "https://vsco.co/{}/gallery",
+        "category": "Photography",
+        "availability_strategy": "status_not_found",
     },
 ]
 
